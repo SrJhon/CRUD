@@ -2,7 +2,7 @@
 
 require '../conexion.php';
 
-
+try{
 
 // REGISTRO DE ESTUDIANTES
 if (isset($_POST['registrar_estudiante'])) {
@@ -22,10 +22,22 @@ if (isset($_POST['registrar_estudiante'])) {
   $direccion = $_POST['direccion'];
 
 
+  
+    
+    
+    
+  
   $registro_estudiante = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
                 VALUES (NULL, '$nombre', '$apellidos', '$programa', '$telefono', '$correo', '$direccion');";
 
   $query_registro_estudiante =  mysqli_query($conectar, $registro_estudiante);
+    
+  } catch(Exception $e){
+    
+   echo "FALLOOOOOOOOOOO: ";
+    var_dump($e);
+    
+  }
 
   if ($query_registro_estudiante) {
 
