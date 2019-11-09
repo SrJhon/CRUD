@@ -21,7 +21,7 @@ if (isset($_POST['registrar_estudiante'])) {
 
   $direccion = $_POST['direccion'];
 
-
+  echo "AQUIIIIIIIIII".$nombre;
   
     
     
