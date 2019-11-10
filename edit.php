@@ -153,7 +153,7 @@ if (isset($_GET['id'])) {
                                     <td> <input type="text" name="apellido" readonly value="<?php echo $apellido; ?>"> </td>
                                     <td> <input type="text" name="asignatura" readonly value="<?php echo $asignatura; ?>"> </td>
                                     <td> <input type="text" name="periodo" readonly value="<?php echo $periodo; ?>"> </td>
-                                    <td> <input type="text" name="nota" value="<?php echo $nota; ?>" pattern="^[0-5]{1,5}(\.[0-9]{0,1})?$" required = "true"> </td>
+                                    <td> <input type="number" step="0.01" min="0" max="5" name="nota" value="<?php echo $nota; ?>" pattern="^[0-5]{1,5}(\.[0-9]{0,1})?$" required = "true"> </td>
                                     <td> <input type="submit" name="update" value="Actualizar"> </td>
                                 </tr>
 
