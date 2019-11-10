@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
     if ($query_delete_nota) {
 
 
-        header('Refresh: 3; URL=index.html');
+        header('Refresh: 3; URL=consulta-general.php');
 
         echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">Nota eliminada<p>';
     } else {
