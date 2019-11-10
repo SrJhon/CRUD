@@ -19,7 +19,7 @@
             if (document.querySelector("#opciones").value != "" || document.querySelector("#opciones2").value != 0 || document.querySelector("#opciones3").value != 0) {
                 document.querySelector("#buscar_general_estudiante").disabled = false;
             } else {
-                document.querySelector("#registrar-boton").disabled = true;
+                document.querySelector("#buscar_general_estudiante").disabled = true;
             }
 
 
