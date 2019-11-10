@@ -1,3 +1,11 @@
+<?php
+
+require 'resources/database/conexion.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
