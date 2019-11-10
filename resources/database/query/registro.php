@@ -21,23 +21,14 @@ if (isset($_POST['registrar_estudiante'])) {
 
   $direccion = $_POST['direccion'];
 
-  echo "AQUIIIIIIIIII".$conectar;
   
-    
-    
- try{
+  
   
   $registro_estudiante = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
                 VALUES (NULL, '$nombre', '$apellidos', '$programa', '$telefono', '$correo', '$direccion');";
 
   $query_registro_estudiante =  mysqli_query($conectar, $registro_estudiante);
     
-  } catch (Exception $e){
-    
-   echo "FALLOOOOOOOOOOO: ";
-    var_dump($e);
-    
-  }
 
   if ($query_registro_estudiante) {
 
@@ -46,7 +37,7 @@ if (isset($_POST['registrar_estudiante'])) {
     echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">Estudiante registrado<p>';
   } else {
 
-    echo "No se pudo registrar al estudiante: ";
+    echo "No se pudo registrar al estudiante prueba prueba: ";
   }
 }
 
