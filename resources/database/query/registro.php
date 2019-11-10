@@ -7,7 +7,6 @@ include '../conexion.php';
 // REGISTRO DE ESTUDIANTES
 if (isset($_POST['registrar_estudiante'])) {
   
-  echo 'Estoy aqui ingresando';
 
   $nombre = $_POST['nombre'];
 
@@ -47,10 +46,7 @@ if (isset($_POST['registrar_estudiante'])) {
 
 //REGISTRO DE NOTA, PRIMERA VEZ
 if (isset($_POST['registrar_nota'])) {
-  
-   echo 'Estoy aqui ingresando 2';
-
-
+ 
   $id = $_GET['id'];
   $nota = $_POST['nota'];
   $nota = round($nota, 1);
@@ -96,8 +92,6 @@ if (isset($_POST['registrar_nota'])) {
 //ACTUALIZACION DE NOTAS
 if (isset($_POST['update'])) {
   
-   echo 'Estoy aqui ingresando 3';
-
 
   $id = $_GET['id'];
   $nota = $_POST['nota'];
