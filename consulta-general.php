@@ -14,12 +14,12 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <script>
-        window.onload = function() {
+        function valida() {
 
-            if (document.querySelector("#nombre_nota").value == "" && document.querySelector("#apellido_nota").value == "" && document.querySelector("#programa_nota").value == "") {
-                document.querySelector("#registrar-boton").disabled = true;
+            if (document.querySelector("#opciones").value != "" || document.querySelector("#opciones2").value != 0 || document.querySelector("#opciones3").value != 0) {
+                document.querySelector("#buscar_general_estudiante").disabled = false;
             } else {
-                document.querySelector("#registrar-boton").disabled = false;
+                document.querySelector("#registrar-boton").disabled = true;
             }
 
 
@@ -181,7 +181,7 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <!-- First name -->
-                            <button class="btn btn-info my-4 btn-block" type="submit" class="form-control" name="buscar_general">Buscar estudiante</button>
+                            <button class="btn btn-info my-4 btn-block" type="submit" class="form-control" id="buscar_general_estudiante" name="buscar_general">Buscar estudiante</button>
                         </div>
                         <div class="col">
                             <!-- Last name -->
