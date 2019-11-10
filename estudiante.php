@@ -1,35 +1,6 @@
 <?php
 
-// Create connection
-$conectar = mysqli_connect("localhost","root", "Huila.3218109199", "registro_notas");
-// Check connection
-if (!$conectar) {
-      echo "Aquiiii";
-      die("Connection failed: " . mysqli_connect_error());
-}
-
-// REGISTRO DE ESTUDIANTES
-if (isset($_POST['registrar_estudiante'])) {
-  $nombre = $_POST['nombre'];
-  $apellidos = $_POST['apellidos'];
-  $programa = $_POST['programa'];
-  $telefono = $_POST['telefono'];
-  $correo = $_POST['correo'];
-  $direccion = $_POST['direccion'];
-  
-  
-  
-  $registro_estudiante = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
-                VALUES (NULL, '$nombre', '$apellidos', '$programa', '$telefono', '$correo', '$direccion');";
-  $query_registro_estudiante =  mysqli_query($conectar, $registro_estudiante);
-    
-  if ($query_registro_estudiante) {
-    header('Refresh: 3; URL=index.php');
-    echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">Estudiante registrado<p>';
-  } else {
-    echo "No se pudo registrar al estudiante prueba prueba: ";
-  }
-}
+echo "Esto es un archivo PHP"
 
 ?>
 
@@ -92,7 +63,7 @@ if (isset($_POST['registrar_estudiante'])) {
         <h1 class="mt-5">REGISTRO DE ESTUDIANTE</h1>
 
         <!-- Default form register -->
-        <form class="text-center border border-light p-5" action="index.php" method="POST">
+        <form class="text-center border border-light p-5" action="resources/database/query/registro_estudiante.php" method="POST">
 
           <div class="form-row mb-4">
             <div class="col">
