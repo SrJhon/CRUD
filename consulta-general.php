@@ -181,7 +181,7 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <!-- First name -->
-                            <button class="btn btn-info my-4 btn-block" type="submit" class="form-control" id="buscar_general_estudiante" name="buscar_general">Buscar estudiante</button>
+                            <button class="btn btn-info my-4 btn-block" type="submit" class="form-control" id="buscar_general_estudiante" name="buscar_general" disabled>Buscar estudiante</button>
                         </div>
                         <div class="col">
                             <!-- Last name -->
