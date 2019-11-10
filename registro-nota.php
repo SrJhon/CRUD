@@ -291,9 +291,9 @@ if (isset($_GET['id'])) {
                   <td> <input type="text" id="apellido_nota" name="apellido" readonly value="<?php echo $apellido_from_id; ?>"> </td>
                   <td> <input type="text" id="programa_nota" name="programa" readonly value="<?php echo $programa_from_id; ?>"> </td>
                   <td>
-                    <select id="opciones2" name="asignatura_busqueda" onChange="valida()">
+                    <select id="opciones2" name="asignatura_busqueda" onChange="valida()" required = "true">
 
-                      <option value="0">Seleccione la asignatura</option>
+                      <option value="">Seleccione la asignatura</option>
 
                       <?php
 
@@ -317,9 +317,9 @@ if (isset($_GET['id'])) {
 
 
                   <td>
-                    <select id="opciones3" name="periodo_busqueda" onChange="valida()">
+                    <select id="opciones3" name="periodo_busqueda" onChange="valida()" required = "true">
 
-                      <option value="0">Seleccione el periodo</option>
+                      <option value="">Seleccione el periodo</option>
 
                       <?php
 
@@ -340,7 +340,7 @@ if (isset($_GET['id'])) {
 
                     </select>
                   </td>
-                  <td> <input type="text" name="nota" pattern="^[0-5]{1,5}(\.[0-5]{0,1})?$" required = "true"> </td>
+                  <td> <input type="number" step="0.01" min="0" max="5" name="nota" required = "true"> </td>
                   <td> <input type="submit" id="registrar-boton" name="registrar_nota" value="Registrar"> </td>
                 </tr>
 
