@@ -53,6 +53,7 @@ if (isset($_POST['registrar_nota'])) {
 
   $id = $_GET['id'];
   $nota = $_POST['nota'];
+  $nota = round($nota, 1);
   $asignatura = $_POST['asignatura_busqueda'];
   $estudiante_id = $id;
   $periodo = $_POST['periodo_busqueda'];
@@ -100,6 +101,7 @@ if (isset($_POST['update'])) {
 
   $id = $_GET['id'];
   $nota = $_POST['nota'];
+  $nota = round($nota, 1);
 
   $actualizar = "UPDATE notas set nota = '$nota' WHERE id_nota = $id ";
 
