@@ -66,7 +66,7 @@ if (isset($_POST['registrar_nota'])) {
 
   if (mysqli_num_rows($query_consulta_registro_primera_vez) >= 1) {
 
-    header('Refresh: 3; URL=../../../index.html');
+    header('Refresh: 3; URL=../../../registro-nota.php');
     echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">No se pudo registrar la nota, ya exite un registro previo<p>';
   } else {
 
@@ -76,7 +76,7 @@ if (isset($_POST['registrar_nota'])) {
 
     if ($query_registro_nota_primera_vez) {
 
-      header('Refresh: 3; URL=../../../index.html');
+      header('Refresh: 3; URL=../../../registro-nota.php');
       echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">Nota registrada<p>';
     } else {
 
@@ -104,7 +104,7 @@ if (isset($_POST['update'])) {
   if ($query) {
 
 
-    header('Refresh: 3; URL=../../../index.html');
+    header('Refresh: 3; URL=../../../consulta-general.php');
 
     echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">Nota registrada<p>';
   } else {
