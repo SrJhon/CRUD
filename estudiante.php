@@ -63,7 +63,7 @@ echo "Esto es un archivo PHP"
         <h1 class="mt-5">REGISTRO DE ESTUDIANTE</h1>
 
         <!-- Default form register -->
-        <form class="text-center border border-light p-5" action="resources/database/query/registro_estudiante.php" method="POST">
+        <form class="text-center border border-light p-5" action="resources/database/query/registro.php" method="POST">
 
           <div class="form-row mb-4">
             <div class="col">
