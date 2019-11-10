@@ -1,5 +1,7 @@
 <?php
 
+mysql_close($conectar);
+
 require 'resources/database/conexion.php';
 
 
