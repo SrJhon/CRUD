@@ -23,15 +23,13 @@ if (isset($_POST['registrar_estudiante'])) {
   $direccion = $_POST['direccion'];
 
   
-  
-  
-  $registro_estudiante = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
+  $registar_nota_primera_vez = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
                 VALUES (NULL, '$nombre', '$apellidos', '$programa', '$telefono', '$correo', '$direccion');";
 
-  $query_registro_estudiante =  mysqli_query(mysqli_connect("localhost","root", "Huila.3218109199", "registro_notas"), $registro_estudiante);
+  $query_registro_nota_primera_vez = mysqli_query($conectar, $registar_nota_primera_vez);
     
 
-  if ($query_registro_estudiante) {
+  if ($query_registro_nota_primera_vez) {
 
     header('Refresh: 3; URL=../../../index.html');
 
