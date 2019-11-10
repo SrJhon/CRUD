@@ -6,6 +6,10 @@ include '../conexion.php';
 
 // REGISTRO DE ESTUDIANTES
 if (isset($_POST['registrar_estudiante'])) {
+  
+  echo 'Estoy aqui ingresando';
+  
+  echo $conectar;
 
 
   $nombre = $_POST['nombre'];
