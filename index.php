@@ -1,9 +1,12 @@
 <?php
 
-mysql_close($conectar);
-
-require 'resources/database/conexion.php';
-
+// Create connection
+$conectar = mysqli_connect("localhost","root", "Huila.3218109199", "registro_notas");
+// Check connection
+if (!$conectar) {
+      echo "Aquiiii";
+      die("Connection failed: " . mysqli_connect_error());
+}
 
 // REGISTRO DE ESTUDIANTES
 if (isset($_POST['registrar_estudiante'])) {
@@ -21,7 +24,7 @@ if (isset($_POST['registrar_estudiante'])) {
   $query_registro_estudiante =  mysqli_query($conectar, $registro_estudiante);
     
   if ($query_registro_estudiante) {
-    header('Refresh: 3; URL=../../../index.html');
+    header('Refresh: 3; URL=index.php');
     echo '<p class="alert alert-success agileits" role="alert" style="text-align: center;">Estudiante registrado<p>';
   } else {
     echo "No se pudo registrar al estudiante prueba prueba: ";
