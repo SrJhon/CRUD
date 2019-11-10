@@ -23,13 +23,13 @@ if (isset($_POST['registrar_estudiante'])) {
   $direccion = $_POST['direccion'];
 
   
-  $registar_nota_primera_vez = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
+  $registrar_estudiante = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
                 VALUES (NULL, '$nombre', '$apellidos', '$programa', '$telefono', '$correo', '$direccion');";
 
-  $query_registro_nota_primera_vez = mysqli_query($conectar, $registar_nota_primera_vez);
+  $query_registro_estudiante = mysqli_query($conectar, $registrar_estudiante);
     
 
-  if ($query_registro_nota_primera_vez) {
+  if ($query_registro_estudiante) {
 
     header('Refresh: 3; URL=../../../index.html');
 
@@ -47,6 +47,9 @@ if (isset($_POST['registrar_estudiante'])) {
 
 //REGISTRO DE NOTA, PRIMERA VEZ
 if (isset($_POST['registrar_nota'])) {
+  
+   echo 'Estoy aqui ingresando 2';
+
 
   $id = $_GET['id'];
   $nota = $_POST['nota'];
@@ -91,6 +94,9 @@ if (isset($_POST['registrar_nota'])) {
 
 //ACTUALIZACION DE NOTAS
 if (isset($_POST['update'])) {
+  
+   echo 'Estoy aqui ingresando 3';
+
 
   $id = $_GET['id'];
   $nota = $_POST['nota'];
