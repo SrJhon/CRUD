@@ -31,7 +31,7 @@ if (isset($_POST['registrar_estudiante'])) {
   $registro_estudiante = "INSERT INTO `estudiante` (`id_estudiante`, `nombre`, `apellido`, `programa`, `telefono`, `correo`, `direccion`) 
                 VALUES (NULL, '$nombre', '$apellidos', '$programa', '$telefono', '$correo', '$direccion');";
 
-  $query_registro_estudiante =  mysqli_query($conectar, $registro_estudiante);
+  $query_registro_estudiante =  mysqli_query(mysqli_connect("localhost","root", "Huila.3218109199", "registro_notas"), $registro_estudiante);
     
 
   if ($query_registro_estudiante) {
